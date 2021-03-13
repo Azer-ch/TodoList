@@ -16,11 +16,9 @@ icon.addEventListener('click',
     }
 )
 document.querySelector('body').addEventListener('dblclick',
-    (e) => 
-    {
-    if(e.target.classList.contains('delete'))
-    {
-        e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-    }
+    (e) => {
+        if (e.target.classList.contains('delete')) {
+            e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+        }
     }
 )
