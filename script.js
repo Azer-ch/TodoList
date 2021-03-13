@@ -6,7 +6,8 @@ icon.addEventListener('click',
     (e) => {
         if (name1.value && content.value) {
             const todo = document.createElement('li');
-            todo.innerText = name1.value + ':' + content.value;
+            todo.innerText = name1.value + ' : ' + content.value;
+            todo.classList.add("list-group-item");
             todo.innerHTML += '<i class="fa fa-trash delete" aria-hidden="true" id="trash"></i>';
             ol.appendChild(todo);
         }
@@ -15,7 +16,7 @@ icon.addEventListener('click',
         }
     }
 )
-document.querySelector('body').addEventListener('dblclick',
+document.querySelector('body').addEventListener('click',
     (e) => {
         if (e.target.classList.contains('delete')) {
             e.target.parentNode.parentNode.removeChild(e.target.parentNode);
